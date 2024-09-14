@@ -1,0 +1,8 @@
+for event in pygame.event.get():
+    if event.type == pygame.QUIT or (event.type == pygame.KEYDOWN and event.key == pygame.K_ESCAPE):
+        pygame.quit()
+        sys.exit()
+    if event.type == pygame.KEYDOWN and (event.key == pygame.K_SPACE or event.key == pygame.K_UP):
+        if vertical > 0:
+            bird_velocity_y = bird_flap_velocity
+            bird_flapped = True
