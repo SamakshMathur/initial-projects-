@@ -1,0 +1,14 @@
+while True:
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            pygame.quit()
+            sys.exit()
+        elif event.type == pygame.KEYDOWN and (event.key == pygame.K_SPACE or event.key == pygame.K_UP):
+            flappygame()
+        else:
+            # Display background and game elements
+            window.blit(game_images['background'], (0, 0))
+            window.blit(game_images['flappybird'], (horizontal, vertical))
+            window.blit(game_images['sea_level'], (ground, elevation))
+            pygame.display.update()
+            framepersecond_clock.tick(framepersecond)
