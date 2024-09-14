@@ -1,0 +1,15 @@
+from PIL import Image, ImageDraw, ImageFont
+
+# Create an empty white image (RGB mode) with dimensions 200x200
+image = Image.new('RGB', (200, 200), 'white')
+
+# Initialize the drawing context
+draw = ImageDraw.Draw(image)
+
+# Draw a rectangle
+draw.rectangle([(50, 50), (150, 150)], outline="black", fill="blue")
+
+# Save the image as image.png
+image.save("image.png")
+
+print("image.png created successfully!")
